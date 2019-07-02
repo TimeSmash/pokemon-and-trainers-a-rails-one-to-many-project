@@ -1,0 +1,27 @@
+<h1>List of all Registered Trainers</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Badges</th>
+        <th>Trainer ID</th>
+        <th>Pokemon owned</th>
+    </tr>
+    <tr>
+    <%@trainers.each do |t|%>
+        <td><%=link_to t.name, trainer_path(t) %></td>
+        <td><%= t.badges %></td>
+        <td><%= t.id %></td>
+        <td>
+            <%t.pokemons.each do|p|%>
+                <%=link_to p.name, pokemon_path(p) %> <!--Make a link with inner text= pokemon name, link =GET /pokemons/:id to trigger pokemons#show -->
+            <%end%>
+        </td>
+        <!--For every poke trainer has want to link/GET to that poke's show page -->
+    </tr>
+    <%end%>
+</table>
+
+<%= link_to 'Add new trainer', new_trainer_path %>
+<%= link_to 'Add new pokemon and assign trainer', new_pokemon_path %>
+<%=  link_to 'Go back to all all registered pokemon', pokemons_path %>

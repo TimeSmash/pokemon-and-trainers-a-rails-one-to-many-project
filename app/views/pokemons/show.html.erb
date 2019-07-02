@@ -1,0 +1,13 @@
+<!--Pokemon show-->
+<h1>You selected this Pokemon:</h1>
+
+<h2>This pokemon is a <%=@pokemon.name%>, owned by the trainer whose id is <%=@pokemon.trainer_id%></h2>
+<h3>It is <%=@pokemon.element_type%>
+<h3>Their trainer is <%=@pokemon.get_trainer_name_by_id%>
+<br>
+<br>
+
+<%= link_to 'Edit this Pokemon', edit_pokemon_path %> <!-- GET to /pokemons/:id/edit -->
+<%=  link_to 'Go back to all Pokemon registered to Trainers', pokemons_path %>
+<%=  link_to 'Go back to all all registered Trainers', trainers_path %>
+

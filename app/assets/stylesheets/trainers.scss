@@ -1,0 +1,20 @@
+// Place all the styles related to the Trainers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+table {
+    border: 1px solid black; 
+    text-align: center; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+    width: 100px;
+}
+
+tr, th, td {
+    border: 1px solid black; 
+    text-align: center; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+    width: 100px;
+}

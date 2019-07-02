@@ -1,0 +1,15 @@
+<h1>You selected this trainer:</h1>
+
+<h2>This trainer's  name is <%=@trainer.name%>, and their id is <%=@trainer.id%></h2>
+<h3>They have <%=@trainer.badges%> badges</h2>
+
+<h4>They own these Pokemon:</h4>
+<ul>
+<%@trainer.pokemons.each do |p|%>
+<li><%= p.name %></li>
+<%end%>
+</ul>
+
+
+<%= link_to 'Edit this trainer', edit_trainer_path %> <!-- GET to /trainers/:id/edit -->
+<%=  link_to 'Go back to all all registered Trainers', trainers_path %>

@@ -1,0 +1,9 @@
+<!--Pokemon edit-->
+<h1>You have chosen to edit <%@pokemon.name%></h1>
+
+<%= form_for @pokemon do |f| %> <!--Should sense this poke already exists, PATCH /pokemons/:id to pokemons#run update-->
+  <%=f.label "Name"  %>
+  <%=f.text_field :name %>
+  <%=collection_select :pokemon, :trainer_id, Trainer.all, :id, :name, prompt: true %>
+  <%=f.submit%>
+<% end %>

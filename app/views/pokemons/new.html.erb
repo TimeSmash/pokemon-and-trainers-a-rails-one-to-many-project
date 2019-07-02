@@ -1,0 +1,11 @@
+<!--Pokemon new-->
+<h1>Add a new Pokemon!</h1>
+<br>
+<%= form_for @pokemon do |f| %>
+  <%=f.label "Name"  %>
+  <%=f.text_field :name %>
+  <%=f.label "Ele Type"  %>
+  <%=f.text_field :element_type %>
+  <%=collection_select :pokemon, :trainer_id, Trainer.all, :id, :name, prompt: true %>
+  <%=f.submit%>
+<% end %>

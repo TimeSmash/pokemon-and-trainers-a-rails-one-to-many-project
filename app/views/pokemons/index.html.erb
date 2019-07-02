@@ -1,0 +1,24 @@
+<!--Pokemon index-->
+
+<h1>Here is a list of all Pokemon registered by trainers</h1>
+
+<table>
+    <tr>
+        <th>Name</th>   
+        <th>Type</th>   
+        <th>Trainer ID</th> 
+        <th>Trainer name</th>
+    </tr>
+    <%@pokemons.each do |p|%>
+    <tr>
+        <td><%=link_to p.name, pokemon_path(p) %></td>
+        <td><%= p.element_type %></td>
+        <td><%= p.trainer_id %></td>
+        <td><%=link_to p.get_trainer_name_by_id, trainer_path(p.trainer_id)%></td>
+    </tr>
+    <%end%>
+</table>
+
+<%= link_to 'Add new trainer', new_trainer_path %>
+<%= link_to 'Add new pokemon and assign trainer', new_pokemon_path %>
+<%=  link_to 'Go back to all all registered Trainers', trainers_path %>
