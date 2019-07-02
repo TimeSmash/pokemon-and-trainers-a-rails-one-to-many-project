@@ -1,24 +1,15 @@
-# README
+#Pokemon and Trainers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Relationships and Attributes
 
-Things you may want to cover:
+Each Trainer has a name and amount of badges and a list of Pokemon they own.
+Each Pokemon has a name, element type, and trainer that owns them
 
-* Ruby version
+A trainer owns many pokemon, each pokemon belongs to one trainer only
+Therefore, a Trainer has_many :pokemons, and a Pokemon belongs_to: trainer
 
-* System dependencies
+Don't forget that both of these will have primary keys, which we're going to utilize for Trainers.
 
-* Configuration
+Tables made that show all Pokemon and trainers as well as clickable names to see each individual trainer and pokemon.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#
